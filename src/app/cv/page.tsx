@@ -4,6 +4,8 @@ import {
   education,
   experience,
   identity,
+  infraProjects,
+  languages,
   stackGroups,
 } from "@/data/profile";
 import { PrintButton } from "./PrintButton";
@@ -64,6 +66,23 @@ export default function CvPage() {
 
       <section className="mb-8">
         <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-black/60">
+          Proyectos
+        </h2>
+        <div className="flex flex-col gap-3">
+          {infraProjects.map((project) => (
+            <div key={project.name} className="break-inside-avoid">
+              <h3 className="text-sm font-semibold">
+                {project.name}
+                {project.status === "in-progress" ? " (en curso)" : ""}
+              </h3>
+              <p className="text-xs leading-relaxed">{project.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-black/60">
           Stack
         </h2>
         <div className="flex flex-col gap-1.5">
@@ -75,7 +94,7 @@ export default function CvPage() {
         </div>
       </section>
 
-      <section className="mb-2 grid grid-cols-2 gap-8">
+      <section className="mb-2 grid grid-cols-3 gap-6">
         <div>
           <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/60">
             Formación
@@ -93,6 +112,16 @@ export default function CvPage() {
           {certifications.slice(0, 4).map((cert) => (
             <p key={cert.name} className="text-xs leading-relaxed">
               {cert.name} ({cert.year})
+            </p>
+          ))}
+        </div>
+        <div>
+          <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/60">
+            Idiomas
+          </h2>
+          {languages.map((item) => (
+            <p key={item.language} className="text-xs leading-relaxed">
+              {item.language}: {item.level}
             </p>
           ))}
         </div>

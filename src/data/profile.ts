@@ -7,7 +7,7 @@ export const identity = {
   phone: "+54 3562 458009",
   linkedin: "https://www.linkedin.com/in/williamsgutierrez/",
   summary:
-    "8 años en infraestructura de redes y sistemas en ISPs y cooperativas regionales. Operación 24/7 de redes FTTH de hasta 16.000 clientes, monitoreo, virtualización, migraciones y automatización de tareas operativas. En transición hacia DevOps e infraestructura cloud.",
+    "8 años en infraestructura de redes y sistemas en ISPs y cooperativas regionales. Operación 24/7 de redes FTTH de hasta 16.000 clientes, monitoreo, virtualización, migraciones y automatización de tareas operativas. En transición hacia DevOps e infraestructura cloud, busco aplicar esta base operativa a roles de DevOps / SRE, automatizando infraestructura y observabilidad.",
   role: "Infraestructura de Redes & Sistemas → DevOps / SRE",
 };
 
@@ -42,7 +42,7 @@ export const experience: Experience[] = [
     period: "oct 2022 – feb 2026",
     context: "Red FTTH de ~7.000 socios. Monitoreo de toda la infraestructura del nodo.",
     highlights: [
-      "Migración KEA DHCP → RADIUS: desarrolló el script que reconfiguró ~5.000–6.000 ONTs en la migración del esquema de autenticación de toda la red, en trabajo conjunto con el equipo de soporte de Rosario",
+      "Migración KEA DHCP → RADIUS: desarrollé el script que reconfiguró ~5.000–6.000 ONTs en la migración del esquema de autenticación de toda la red, en trabajo conjunto con el equipo de soporte de Rosario",
       "Homologación de ONT TP-Link sobre OLT Zhone ante la discontinuidad de Zhone, con aprovisionamiento propio para reducir la carga manual del área de instalaciones",
       "Modernización del stack de monitoreo: Zabbix 2.4 → 4.0, incorporación de LibreNMS y NFSEN",
       "Documentación de red desde cero con NetBox como sistema de inventario",
@@ -92,10 +92,10 @@ export const infraProjects: InfraProject[] = [
     tags: ["Proxmox VE", "Virtualización", "Networking"],
   },
   {
-    name: "Pterodactyl — plataforma de servidores de juegos",
+    name: "Servidores de juegos sobre Proxmox",
     description:
-      "Panel y Wings en contenedores separados sobre Proxmox, expuestos a internet con dominio propio (DNS en Cloudflare) y subdominio dedicado, publicado en puerto alternativo por restricciones de red residencial. Corriendo un servidor de Assetto Corsa.",
-    tags: ["Docker", "Proxmox VE", "Cloudflare DNS", "Exposición de servicios"],
+      "Máquinas independientes por juego (Assetto Corsa, Valheim) sobre Proxmox, cada una expuesta a internet con dominio propio (DNS en Cloudflare), subdominio dedicado y publicación en puerto alternativo por restricciones de red residencial.",
+    tags: ["Proxmox VE", "Cloudflare DNS", "Exposición de servicios"],
   },
   {
     name: "Contenerización y migración del ERP",
@@ -188,6 +188,11 @@ export const stackGroups: StackGroup[] = [
     label: "Desarrollo (asistido por IA)",
     items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "MongoDB", "Vercel"],
   },
+];
+
+export const languages = [
+  { language: "Español", level: "Nativo" },
+  { language: "Inglés", level: "Lectura técnica" },
 ];
 
 export const learning = [
