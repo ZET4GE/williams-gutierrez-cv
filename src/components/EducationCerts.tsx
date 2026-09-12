@@ -28,7 +28,18 @@ export function EducationCerts() {
           <ul className="flex flex-col gap-2.5">
             {certifications.map((cert) => (
               <li key={cert.name} className="flex justify-between gap-4 text-sm">
-                <span className="text-foreground/90">{cert.name}</span>
+                {cert.url ? (
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-foreground/90 hover:text-accent hover:underline"
+                  >
+                    {cert.name}
+                  </a>
+                ) : (
+                  <span className="text-foreground/90">{cert.name}</span>
+                )}
                 <span className="whitespace-nowrap font-mono text-xs text-muted">
                   {cert.year}
                 </span>

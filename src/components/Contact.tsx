@@ -39,7 +39,14 @@ export function Contact() {
         </a>
       </div>
 
-      <p className="mt-6 font-mono text-xs text-muted">{identity.phone}</p>
+      <a
+        href="https://wa.me/5493562458009"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-6 inline-block font-mono text-xs text-muted hover:text-accent hover:underline"
+      >
+        {identity.phone} · WhatsApp
+      </a>
     </section>
   );
 }

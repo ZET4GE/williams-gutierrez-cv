@@ -112,6 +112,7 @@ export type WebProject = {
   description: string;
   stack: string[];
   disclaimer?: string;
+  image?: string;
 };
 
 export const webProjects: WebProject[] = [
@@ -143,11 +144,6 @@ export const otherWebProjects = [
     name: "ACORDAMOS",
     description: "App de organización para parejas, con feed iCal para notificaciones.",
     stack: ["Next.js", "Supabase", "MercadoPago"],
-  },
-  {
-    name: "Oratoria Arena",
-    description: "Juego multijugador asincrónico de oratoria, más una app standalone de práctica.",
-    stack: ["Next.js", "Supabase"],
   },
 ];
 
@@ -204,11 +200,6 @@ export const learning = [
 
 export const education = [
   {
-    title: "Técnico Superior en Programación",
-    institution: "UTN Facultad Regional Rafaela",
-    period: "1,5 años cursados",
-  },
-  {
     title: "Técnico en Mantenimiento y Electromecánica",
     institution: "E.E.T.P. Soldados Argentinos, Moisés Ville, Santa Fe",
     period: "2014",
@@ -216,12 +207,41 @@ export const education = [
 ];
 
 export const certifications = [
-  { name: "Microsoft Applied Skills: Administer Active Directory Domain Services", year: "2026" },
-  { name: "Linux SysAdmin — EducaciónIT", year: "2024" },
-  { name: "CCNAv7: Switching, Routing and Wireless Essentials — Cisco", year: "2024" },
-  { name: "CCNAv7: Introducción a Redes — Cisco", year: "2023" },
-  { name: "OPI 2.0 — Oratoria y Comunicación Profesional", year: "2026" },
-  { name: "NDG Linux Unhatched — Cisco", year: "2022" },
-  { name: "Introduction to Cybersecurity — Cisco", year: "2022" },
-  { name: "PHP y MySQL inicial — UTN Buenos Aires", year: "2021" },
+  {
+    name: "Microsoft Applied Skills: Administer Active Directory Domain Services",
+    year: "2026",
+    url: "https://learn.microsoft.com/es-mx/users/williamsgutierrez-7262/credentials/d8587cc1a1419d80",
+  },
+  {
+    name: "Linux SysAdmin — EducaciónIT",
+    year: "2024",
+    url: "https://www.educacionit.com/perfil/williams-gutierrez-998795/certificado/71553",
+  },
+  {
+    name: "Introducción a la Programación — EducaciónIT",
+    year: "2026",
+    url: "https://www.educacionit.com/perfil/williams-gutierrez-998795/certificado/54677",
+  },
+  {
+    name: "CCNAv7: Switching, Routing and Wireless Essentials — Cisco",
+    year: "2024",
+    url: "https://www.credly.com/badges/24cdb44b-3915-4c3e-b3e7-82bbbb41fe96",
+  },
+  {
+    name: "CCNAv7: Introducción a Redes — Cisco",
+    year: "2023",
+    url: "https://www.credly.com/badges/28750ff6-0132-41dc-a85c-ad1edc9b5de1",
+  },
+  {
+    name: "OPI 2.0 — Oratoria y Comunicación Profesional",
+    year: "2026",
+    url: "https://comunidad.francopisso.com/es/club/francopisso/product/6233801/certificate/c5939f7e-d6b9-4896-a349-b8ec198a66ee/preview",
+  },
+  { name: "NDG Linux Unhatched — Cisco", year: "2022", url: "" },
+  { name: "Introduction to Cybersecurity — Cisco", year: "2022", url: "" },
+  {
+    name: "PHP y MySQL inicial — UTN Buenos Aires",
+    year: "2021",
+    url: "https://validator.centrodeelearning.com/validator/Xsc13QITL7",
+  },
 ];

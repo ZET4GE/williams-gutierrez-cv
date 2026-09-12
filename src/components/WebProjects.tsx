@@ -16,10 +16,25 @@ export function WebProjects() {
             key={project.name}
             className="rounded-lg border border-border bg-surface p-5"
           >
+            {project.image && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={project.image}
+                alt={`Vista previa de ${project.name}`}
+                className="mb-4 w-full rounded-md border border-border object-cover"
+              />
+            )}
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="text-sm font-semibold text-foreground">{project.name}</h3>
               {project.url && (
-                <span className="font-mono text-xs text-accent">{project.url}</span>
+                <a
+                  href={`https://${project.url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-xs text-accent hover:underline"
+                >
+                  {project.url}
+                </a>
               )}
             </div>
             <p className="mt-2 text-sm leading-relaxed text-muted">{project.description}</p>
