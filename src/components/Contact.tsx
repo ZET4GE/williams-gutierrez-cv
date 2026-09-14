@@ -1,6 +1,9 @@
-import { identity } from "@/data/profile";
+import { getContent } from "@/lib/content";
+import { ContactEmailButton } from "@/components/ContactEmailButton";
 
-export function Contact() {
+export async function Contact() {
+  const { identity } = await getContent();
+
   return (
     <section id="contacto" className="mx-auto w-full max-w-4xl px-6 py-20 sm:py-24">
       <div className="mb-10 flex items-baseline gap-3">
@@ -17,12 +20,7 @@ export function Contact() {
       </p>
 
       <div className="mt-6 flex flex-wrap gap-4">
-        <a
-          href={`mailto:${identity.email}`}
-          className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
-        >
-          {identity.email}
-        </a>
+        <ContactEmailButton />
         <a
           href={identity.linkedin}
           target="_blank"

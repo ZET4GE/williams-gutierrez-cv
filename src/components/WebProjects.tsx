@@ -1,7 +1,9 @@
 import { Section } from "@/components/Section";
-import { otherWebProjects, webProjects } from "@/data/profile";
+import { getContent } from "@/lib/content";
 
-export function WebProjects() {
+export async function WebProjects() {
+  const { webProjects, otherWebProjects } = await getContent();
+
   return (
     <Section id="desarrollo" index="03" title="Proyectos de desarrollo web">
       <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted">

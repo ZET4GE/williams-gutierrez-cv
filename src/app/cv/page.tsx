@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import {
-  certifications,
-  education,
-  experience,
-  identity,
-  infraProjects,
-  languages,
-  stackGroups,
-} from "@/data/profile";
+import { getContent } from "@/lib/content";
 import { PrintButton } from "./PrintButton";
 
 export const metadata: Metadata = {
   title: "CV — Williams Gutiérrez",
 };
 
-export default function CvPage() {
+export const revalidate = 300;
+
+export default async function CvPage() {
+  const {
+    certifications,
+    education,
+    experience,
+    identity,
+    infraProjects,
+    languages,
+    stackGroups,
+  } = await getContent();
+
   return (
     <div className="mx-auto w-full max-w-3xl bg-white px-8 py-12 text-black print:px-0 print:py-0">
       <div className="mb-6 flex justify-end print:hidden">

@@ -1,7 +1,9 @@
 import { Section } from "@/components/Section";
-import { certifications, education } from "@/data/profile";
+import { getContent } from "@/lib/content";
 
-export function EducationCerts() {
+export async function EducationCerts() {
+  const { education, certifications } = await getContent();
+
   return (
     <Section id="formacion" index="05" title="Formación y certificaciones">
       <div className="grid gap-10 sm:grid-cols-2">

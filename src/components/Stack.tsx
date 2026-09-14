@@ -1,7 +1,9 @@
 import { Section } from "@/components/Section";
-import { learning, stackGroups } from "@/data/profile";
+import { getContent } from "@/lib/content";
 
-export function Stack() {
+export async function Stack() {
+  const { stackGroups, learning } = await getContent();
+
   return (
     <Section id="stack" index="04" title="Stack y herramientas">
       <div className="grid gap-6 sm:grid-cols-2">

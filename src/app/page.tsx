@@ -8,6 +8,8 @@ import { Nav } from "@/components/Nav";
 import { Stack } from "@/components/Stack";
 import { WebProjects } from "@/components/WebProjects";
 
+export const revalidate = 300;
+
 export default function Home() {
   return (
     <>

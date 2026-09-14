@@ -82,6 +82,7 @@ export type InfraProject = {
   description: string;
   tags: string[];
   status?: "in-progress";
+  image?: string;
 };
 
 export const infraProjects: InfraProject[] = [

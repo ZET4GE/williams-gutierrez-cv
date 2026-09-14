@@ -1,6 +1,8 @@
-import { identity } from "@/data/profile";
+import { getContent } from "@/lib/content";
 
-export function Hero() {
+export async function Hero() {
+  const { identity } = await getContent();
+
   return (
     <section id="top" className="mx-auto w-full max-w-4xl px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
       <p className="font-mono text-sm text-accent">infraestructura de redes &amp; sistemas</p>

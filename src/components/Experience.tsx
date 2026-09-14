@@ -1,7 +1,9 @@
 import { Section } from "@/components/Section";
-import { experience } from "@/data/profile";
+import { getContent } from "@/lib/content";
 
-export function Experience() {
+export async function Experience() {
+  const { experience } = await getContent();
+
   return (
     <Section id="experiencia" index="01" title="Experiencia profesional">
       <div className="flex flex-col gap-12">
